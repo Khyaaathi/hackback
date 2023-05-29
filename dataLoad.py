@@ -1,0 +1,7 @@
+import requests
+
+END_POINT = "http://rathyatrabackend.azurewebsites.net/postSos/"
+data = "ewogICAgImV2ZW50TmFtZSI6ICJSYXRoIFlhdHJhIDIwMjMiLAogICAgImxhbmd1YWdlIjogIk9kaWEiLAogICAgImNhdGVnb3J5IjogIuCsoeCsvuCsleCtjeCspOCssOCtgCDgrJzgrLDgrYHgrLDgrYDgrJXgrL7grLPgrYDgrKgg4Kyq4Kyw4Ky/4Ky44K2N4Kyl4Ky/4Kyk4Ky/IHwiLAogICAgImRhdGEiOnsKICAgICAgICAibG9jYXRpb24iOiAiU3RhdGlvbiIsCiAgICAgICAgImxhdGl0dWRlIjogMCwKICAgICAgICAibG9uZ2l0dWRlIjogMCwKICAgICAgICAiZGVzY3JpcHRpb24iOiAiSGlnaCBCUCIsCiAgICAgICAgIm5hbWUiOiAi4Ky24Ky/4Kys4Ky2IiwKICAgICAgICAicHJpbWFyeU51bWJlciI6ICI5ODc2NTQzMjEwIiwKICAgICAgICAiYWx0ZXJuYXRlTnVtYmVyIjogbnVsbAogICAgfQp9"
+for i in range(10):
+    r = requests.post(url = END_POINT, data = {"data": data}, headers={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InBvbGljZUFkbWluIiwicGFzc3dvcmQiOiJQb2xpY2VAMTIzIn0.zwGkfZHfkUudUgKmA_Oqb7Ux74y4VDVqeeyvg71v1rU"}, verify=False)   
+    print(r.text)
